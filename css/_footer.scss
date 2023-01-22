@@ -1,0 +1,115 @@
+footer {
+    background-color: $second-bg;
+    padding: 60px 0 30px;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
+        .with-logo {
+            .logo {
+                margin-bottom: 20px;
+                span {
+                    text-transform: uppercase;
+                    font-size: 35px;
+                    font-weight: 400;
+                    color: $blue;
+                }
+            }
+            p {
+                max-width: 300px;
+                margin-bottom: 20px;
+            }
+            .social {
+                gap: 10px;
+                a {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background-color: $social-bg;
+                    i {
+                        font-size: 16px;
+                        color: $white;
+                    }
+                    &:hover {
+                        background-color: $blue;
+                    }
+                }
+            }
+        }
+        .useful-links {
+            h3 {
+                font-size: 20px;
+                color: $link-c;
+                margin-bottom: 20px;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                li {
+                    a {
+                        font-size: 16px;
+                        font-weight: 400;
+                        text-transform: capitalize;
+                        color: $link-c;
+                        &:hover {
+                            color: $blue;
+                        }
+                    }
+                }
+            }
+        }
+        .copy {
+            padding-top: 20px;
+            border-top: 1px solid $border-c;
+            width: 100%;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 500;
+            color: $text-c;
+            a {
+                font-weight: 600;
+                color: $link-c;
+                font-size: 16px;
+                margin-left: 5px;
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+        .go-up {
+            overflow: hidden;
+            width: 45px;
+            height: 45px;
+            border-radius: 4px;
+            background-color: $blue;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            opacity: 0;
+            &::before {
+                content: "";
+                width: 0;
+                height: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: $s-blue;
+                transition: .4s;
+                border-radius: 50%;
+            }
+            i {
+                position: relative;
+                font-size: 18px;
+                color: $white;
+            }
+            &:hover::before {
+                width: 200%;
+                height: 200%;
+            }
+        }
+    }
+}

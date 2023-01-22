@@ -1,0 +1,45 @@
+.button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    padding: 10px 20px;
+    overflow: hidden;
+    &::before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $s-blue;
+        transition: .4s;
+        border-radius: 50%;
+    }
+    span {
+        font-size: 16px;
+        font-weight: 500;
+        color: $white;
+        text-transform: capitalize;
+        position: relative;
+    }
+    &.rad-6 {
+        border-radius: 6px;
+    }
+    &.rad-30 {
+        border-radius: 30px;
+    }
+    &.bg-blue {
+        background-color: $blue;
+        span {
+            color: $white;
+        }
+    }
+    &:hover::before {
+        width: 200%;
+        height: 200%;
+    }
+
+}
